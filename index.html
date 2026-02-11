@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logg — Log your cultural experiences</title>
-    <meta name="description" content="Logg is a social journal for your cultural life. Track and share the books, movies, theatre shows, and exhibitions you experience.">
-    <meta name="theme-color" content="#FBF4E9">
+    <meta name="description" content="Logg is a social journal for your cultural life. Track and share the books, movies, theatre shows, exhibitions, and concerts you experience.">
+    <meta name="theme-color" content="#F5F1EA" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1C1A17" media="(prefers-color-scheme: dark)">
+
+    <!-- Google Fonts: Fraunces (web equivalent of Cooper) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Logg — Log your cultural experiences">
-    <meta property="og:description" content="A social journal for your cultural life. Track books, movies, theatre, and exhibitions.">
+    <meta property="og:description" content="A social journal for your cultural life. Track books, movies, theatre, exhibitions, and concerts.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://logg-app.com">
 </head>
@@ -33,52 +40,122 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <!-- Replace src with your actual app icon -->
             <img src="appicon.png" alt="Logg App Icon" class="app-icon">
             <h1>Log your <span>cultural</span> experiences</h1>
-            <p class="tagline">Track and share the books, movies, theatre shows, and exhibitions you experience. Follow friends and discover what they're into.</p>
+            <p class="tagline">A social journal for your cultural life. Track and share everything you read, watch, and attend — then see what your friends are into.</p>
 
-            <!-- App Store badge — replace # with your actual App Store URL once live -->
+            <!-- Activity type pills -->
+            <div class="activity-types-hero">
+                <span class="activity-pill book">&#128214; Books</span>
+                <span class="activity-pill movie">&#127916; Movies</span>
+                <span class="activity-pill theatre">&#127917; Theatre</span>
+                <span class="activity-pill exhibition">&#127963; Exhibitions</span>
+                <span class="activity-pill concert">&#127928; Concerts</span>
+            </div>
+
+            <!-- App Store badge -->
             <a href="#" class="app-store-badge" aria-label="Download on the App Store">
                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
             </a>
         </div>
     </section>
 
+    <!-- Activity Types Showcase -->
+    <section class="activity-types" id="types">
+        <h2>Five ways to logg</h2>
+        <p class="section-subtitle">Every type of cultural experience has its own colour and icon in your feed.</p>
+        <div class="types-grid">
+            <div class="type-card book">
+                <div class="type-icon">&#128214;</div>
+                <h3>Books</h3>
+            </div>
+            <div class="type-card movie">
+                <div class="type-icon">&#127916;</div>
+                <h3>Movies</h3>
+            </div>
+            <div class="type-card theatre">
+                <div class="type-icon">&#127917;</div>
+                <h3>Theatre</h3>
+            </div>
+            <div class="type-card exhibition">
+                <div class="type-icon">&#127963;</div>
+                <h3>Exhibitions</h3>
+            </div>
+            <div class="type-card concert">
+                <div class="type-icon">&#127928;</div>
+                <h3>Concerts</h3>
+            </div>
+        </div>
+    </section>
+
     <!-- Features -->
     <section class="features" id="features">
-        <h2>What you can do with Logg</h2>
+        <h2>What you can do</h2>
+        <p class="section-subtitle">Everything you need to keep a beautiful cultural journal and share it with friends.</p>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="icon">📖</div>
+                <div class="icon">&#128221;</div>
                 <h3>Log activities</h3>
-                <p>Record books, movies, theatre shows, and exhibitions with notes, photos, location, and date.</p>
+                <p>Record books, movies, theatre, exhibitions, and concerts with notes, photos, location, and date.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">👥</div>
+                <div class="icon">&#128101;</div>
                 <h3>Follow friends</h3>
                 <p>See what your friends are reading, watching, and visiting in a beautiful social feed.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">📸</div>
+                <div class="icon">&#128247;</div>
                 <h3>Add photos</h3>
-                <p>Capture the moment with up to 5 photos per activity to remember the experience.</p>
+                <p>Capture the moment with up to 5 photos per activity — from your camera or library.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">💬</div>
+                <div class="icon">&#128172;</div>
                 <h3>Comment &amp; like</h3>
                 <p>Interact with your friends' activities. Share your thoughts and recommendations.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">📊</div>
-                <h3>Track your stats</h3>
-                <p>See how many activities you've logged and build your personal cultural profile.</p>
+                <div class="icon">&#128205;</div>
+                <h3>Location search</h3>
+                <p>Search and autocomplete locations when logging — or let the app detect your city automatically.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">📍</div>
-                <h3>Auto-location</h3>
-                <p>Optionally auto-fill city and country when logging an activity. No precise tracking.</p>
+                <div class="icon">&#128200;</div>
+                <h3>Your profile</h3>
+                <p>Build your cultural profile with stats, filter your loggs by type, and share it with the world.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2>How it works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Log it</h3>
+                <p>Pick a type, add a title, note, photos, and location. Your logg is saved instantly.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Share it</h3>
+                <p>Your logg appears in your followers' feed. They can like, comment, and discover new things.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Explore</h3>
+                <p>Search for friends, follow them, and see what they're reading, watching, and attending.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-card">
+            <h2>Start your cultural journal</h2>
+            <p>Join Logg and never forget the things that move you.</p>
+            <a href="#" class="app-store-badge" aria-label="Download on the App Store">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
         </div>
     </section>
 
