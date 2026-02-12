@@ -153,9 +153,7 @@ nav .logo {
     font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
-nav .logo span {
-    color: var(--accent);
-}
+/* Logo text is uniform color — no accent span */
 
 nav .nav-links {
     display: flex;
