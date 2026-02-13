@@ -34,7 +34,7 @@
     <!-- Privacy Policy -->
     <div class="legal-page">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: February 12, 2026</p>
+        <p class="last-updated">Last updated: February 13, 2026</p>
 
         <div class="legal-content">
             <p>Logg ("we", "our", or "us") operates the Logg mobile application (the "App"). This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our App.</p>
@@ -55,31 +55,44 @@
             <ul>
                 <li>A profile photo (avatar)</li>
                 <li>A location description (e.g., "Paris, France")</li>
+                <li>A private account preference (controls who can see your activities)</li>
             </ul>
 
             <h3>1.3 Activity Data</h3>
             <p>When you log an activity, we collect:</p>
             <ul>
-                <li>Activity type (Book, Movie, Theatre, Exhibition, or Concert)</li>
+                <li>Activity type (Movie, Theatre, Exhibition, Concert, or Book)</li>
                 <li>Title of the activity</li>
                 <li>A note or description (up to 100 words)</li>
                 <li>Date and time</li>
                 <li>Location (optional, entered manually via location search or auto-filled from your device)</li>
                 <li>Photos (up to 5 per activity)</li>
+                <li>Privacy setting (whether the activity is private or visible to followers)</li>
             </ul>
 
             <h3>1.4 Social Interaction Data</h3>
             <p>When you interact with other users, we collect:</p>
             <ul>
-                <li>Follow relationships</li>
+                <li>Follow relationships (including pending follow requests for private accounts)</li>
                 <li>Likes on activities</li>
                 <li>Comments on activities</li>
             </ul>
 
-            <h3>1.5 Device &amp; Location Data</h3>
+            <h3>1.5 Notification Data</h3>
+            <p>We collect and store notification records to keep you informed about activity on your account:</p>
+            <ul>
+                <li>Notification type (follow, like, comment, comment reply)</li>
+                <li>Read/unread status</li>
+                <li>Associated user and activity references</li>
+            </ul>
+
+            <h3>1.6 Push Notification Data</h3>
+            <p>With your explicit permission, we collect your device push notification token to deliver push notifications. You can disable push notifications at any time through your device settings.</p>
+
+            <h3>1.7 Device &amp; Location Data</h3>
             <p>With your explicit permission, we may access your approximate location (city and country level only) to auto-fill the location field when logging an activity. We do not store precise GPS coordinates.</p>
 
-            <h3>1.6 Automatically Collected Data</h3>
+            <h3>1.8 Automatically Collected Data</h3>
             <p>We collect minimal technical data necessary for app operation:</p>
             <ul>
                 <li>Device type and operating system version</li>
@@ -94,7 +107,9 @@
                 <li>Enable you to log and share cultural activities</li>
                 <li>Display your profile to other users</li>
                 <li>Provide the social feed and follow functionality</li>
-                <li>Send notifications about follows, comments, and replies</li>
+                <li>Manage private account settings and follow requests</li>
+                <li>Send in-app and push notifications about follows, likes, comments, and replies</li>
+                <li>Enforce activity-level privacy (private loggs visible only to you)</li>
                 <li>Auto-fill location when you log an activity (with your permission)</li>
                 <li>Provide location search and autocomplete when logging activities</li>
                 <li>Improve and maintain the App</li>
@@ -107,9 +122,10 @@
             <p>The following information is visible to other Logg users:</p>
             <ul>
                 <li>Your name, avatar, and location description</li>
-                <li>Your logged activities (type, title, note, date, location, photos)</li>
+                <li>Your logged activities (type, title, note, date, location, photos) — unless your account is private, in which case only approved followers can see your activities</li>
                 <li>Your follower and following counts</li>
             </ul>
+            <p>Activities marked as private are visible only to you, regardless of your account privacy setting. Follow requests for private accounts are visible only to you until you accept or reject them.</p>
 
             <h3>3.2 With Service Providers</h3>
             <p>We use <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> as our backend infrastructure provider. Supabase processes and stores your data on our behalf, including account authentication, database storage, file storage (photos), and real-time notifications.</p>
@@ -137,10 +153,14 @@
             <ul>
                 <li>Access your personal data through the App</li>
                 <li>Update your profile information at any time</li>
+                <li>Switch your account between public and private at any time</li>
+                <li>Accept or reject follow requests at any time</li>
+                <li>Mark individual activities as private</li>
+                <li>Disable push notifications at any time through your device settings</li>
                 <li>Delete your account and all associated data from the Settings screen</li>
                 <li>Revoke location, camera, or photo library permissions at any time through your device settings</li>
             </ul>
-            <p>When you delete your account, your profile, activities, photos, comments, likes, follows, and notifications are permanently removed. This action cannot be undone.</p>
+            <p>When you delete your account, your profile, activities, photos, comments, likes, follows, follow requests, and notifications are permanently removed. This action cannot be undone.</p>
 
             <h2>6. Data Retention</h2>
             <ul>
