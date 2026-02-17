@@ -144,9 +144,9 @@ nav .nav-inner {
 }
 
 nav .logo {
-    font-family: 'Potta One', cursive;
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--text-primary);
     text-decoration: none;
     letter-spacing: -0.5px;
