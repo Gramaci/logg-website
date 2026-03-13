@@ -4,43 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Colta</title>
-    <meta name="description" content="Privacy Policy for the Colta mobile application.">
-    <meta name="theme-color" content="#F5F1EA" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1C1A17" media="(prefers-color-scheme: dark)">
+    <style>
+        :root {
+            --bg: #FAFAF8;
+            --text: #1A1A1A;
+            --text-secondary: #6B6B6B;
+            --accent: #2D2D2D;
+            --border: #E5E5E3;
+            --card-bg: #FFFFFF;
+            --max-width: 720px;
+        }
 
-    <!-- Google Fonts: Fraunces -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900&display=swap" rel="stylesheet">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .lang-toggle {
+            display: flex;
+            gap: 0;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .lang-btn:hover:not(.active) {
+            background: var(--border);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .intro {
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            letter-spacing: -0.3px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        ul li {
+            font-size: 15px;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .footer-links {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--text);
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 32px 20px 60px; }
+            h1 { font-size: 26px; }
+            header { flex-direction: column; gap: 16px; align-items: flex-start; }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">Colta</a>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+                <button class="lang-btn" onclick="setLang('fr')" id="btn-fr">FR</button>
+            </div>
+        </header>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-inner">
-            <a href="/" class="logo">colta</a>
-            <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="privacy.html" class="active">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
-        </div>
-    </nav>
+        <!-- ENGLISH -->
+        <div id="content-en">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: March 9, 2026</p>
 
-    <!-- Privacy Policy -->
-    <div class="legal-page">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: March 9, 2026</p>
+            <p class="intro">Colta ("we", "our", or "us") operates the Colta mobile application (the "App"). This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our App.</p>
 
-        <div class="legal-content">
-            <p>Colta ("we", "our", or "us") operates the Colta mobile application (the "App"). This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our App.</p>
             <p>By using the App, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
 
             <h2>1. Information We Collect</h2>
@@ -66,7 +209,7 @@
             <ul>
                 <li>Activity type (Movie, Theatre, Exhibition, Concert, or Book)</li>
                 <li>Title of the activity</li>
-                <li>Your rating of the activity (on a scale from "Meh" to "Mind-blown")</li>
+                <li>An optional badge (e.g. "Loved it!")</li>
                 <li>A note or description (up to 100 words)</li>
                 <li>Date and time</li>
                 <li>Location (optional, entered manually via location search or auto-filled from your device)</li>
@@ -146,9 +289,9 @@
             <h3>3.2 With Service Providers</h3>
             <p>We use the following service providers to operate the App:</p>
             <ul>
-                <li><a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> — our backend infrastructure provider. Supabase processes and stores your data on our behalf, including account authentication, database storage, file storage (photos), and real-time notifications. Supabase's privacy policy is available at <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</li>
-                <li><a href="https://resend.com" target="_blank" rel="noopener">Resend</a> — used solely to deliver email notifications to our support team when a user submits a content report. No personal user data beyond the report content is shared with Resend. Resend's privacy policy is available at <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">resend.com/legal/privacy-policy</a>.</li>
-                <li>Apple Push Notification service (APNs) — used to deliver push notifications to your device when you have opted in. Only your device token and notification content are transmitted to Apple for delivery.</li>
+                <li><strong>Supabase</strong> (<a href="https://supabase.com">supabase.com</a>) — our backend infrastructure provider. Supabase processes and stores your data on our behalf, including account authentication, database storage, file storage (photos), and real-time notifications. <a href="https://supabase.com/privacy">Supabase's privacy policy</a>.</li>
+                <li><strong>Resend</strong> (<a href="https://resend.com">resend.com</a>) — used solely to deliver email notifications to our support team when a user submits a content report. No personal user data beyond the report content is shared with Resend. <a href="https://resend.com/legal/privacy-policy">Resend's privacy policy</a>.</li>
+                <li><strong>Apple Push Notification service (APNs)</strong> — used to deliver push notifications to your device when you have opted in. Only your device token and notification content are transmitted to Apple for delivery.</li>
             </ul>
 
             <h3>3.3 We Do NOT</h3>
@@ -206,19 +349,212 @@
             <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
             <p><a href="mailto:support@getcolta.com">support@getcolta.com</a></p>
         </div>
+
+        <!-- FRENCH -->
+        <div id="content-fr" style="display: none;">
+            <h1>Politique de Confidentialité</h1>
+            <p class="last-updated">Dernière mise à jour : 9 mars 2026</p>
+
+            <p class="intro">Colta (« nous », « notre ») exploite l'application mobile Colta (l'« Application »). La présente Politique de Confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos informations personnelles lorsque vous utilisez notre Application.</p>
+
+            <p>En utilisant l'Application, vous acceptez la collecte et l'utilisation de vos informations conformément à la présente Politique de Confidentialité.</p>
+
+            <h2>1. Informations que nous collectons</h2>
+
+            <h3>1.1 Informations de compte</h3>
+            <p>Lors de la création de votre compte, nous collectons :</p>
+            <ul>
+                <li>Votre nom complet</li>
+                <li>Votre adresse e-mail</li>
+                <li>Un mot de passe (stocké de manière sécurisée sous forme hachée)</li>
+            </ul>
+
+            <h3>1.2 Informations de profil</h3>
+            <p>Vous pouvez facultativement fournir :</p>
+            <ul>
+                <li>Une photo de profil (avatar)</li>
+                <li>Une description de localisation (par ex. « Paris, France »)</li>
+                <li>Une préférence de compte privé (contrôle qui peut voir vos activités)</li>
+            </ul>
+
+            <h3>1.3 Données d'activité</h3>
+            <p>Lorsque vous enregistrez une activité, nous collectons :</p>
+            <ul>
+                <li>Le type d'activité (Film, Théâtre, Exposition, Concert ou Livre)</li>
+                <li>Le titre de l'activité</li>
+                <li>Un badge optionnel (par ex. « Adoré ! »)</li>
+                <li>Une note ou description (jusqu'à 100 mots)</li>
+                <li>La date et l'heure</li>
+                <li>Le lieu (optionnel, saisi manuellement via la recherche de lieu ou rempli automatiquement depuis votre appareil)</li>
+                <li>Les photos (jusqu'à 10 par activité)</li>
+                <li>Le paramètre de confidentialité (si l'activité est privée ou visible par les abonnés)</li>
+            </ul>
+
+            <h3>1.4 Données d'interaction sociale</h3>
+            <p>Lorsque vous interagissez avec d'autres utilisateurs, nous collectons :</p>
+            <ul>
+                <li>Les relations d'abonnement (y compris les demandes d'abonnement en attente pour les comptes privés)</li>
+                <li>Les relations de blocage</li>
+                <li>Les mentions « J'aime » sur les activités et les commentaires</li>
+                <li>Les commentaires sur les activités</li>
+                <li>Les mentions (@) d'autres utilisateurs dans les commentaires et les notes d'activité</li>
+                <li>Les activités enregistrées (mises en favoris)</li>
+                <li>Les signalements que vous soumettez sur des activités ou des commentaires (y compris le motif et les détails optionnels)</li>
+            </ul>
+
+            <h3>1.5 Données de notification</h3>
+            <p>Nous collectons et stockons des enregistrements de notifications pour vous tenir informé de l'activité sur votre compte :</p>
+            <ul>
+                <li>Le type de notification (abonnement, demande d'abonnement, mention « J'aime », commentaire, réponse à un commentaire, mention, mention dans une activité, mention « J'aime » sur un commentaire)</li>
+                <li>Le statut lu/non lu</li>
+                <li>Les références aux utilisateurs et activités associés</li>
+            </ul>
+
+            <h3>1.6 Données de notifications push</h3>
+            <p>Avec votre autorisation explicite, nous collectons le jeton de notification push de votre appareil pour envoyer des notifications push. Vous pouvez désactiver les notifications push à tout moment via les réglages de votre appareil.</p>
+
+            <h3>1.7 Données de l'appareil et de localisation</h3>
+            <p>Avec votre autorisation explicite, nous pouvons accéder à votre localisation approximative (ville et pays uniquement) pour remplir automatiquement le champ de lieu lors de l'enregistrement d'une activité. Nous ne stockons pas de coordonnées GPS précises.</p>
+
+            <h3>1.8 Analyses d'utilisation</h3>
+            <p>Nous collectons des événements d'utilisation anonymes de première partie (tels que les écrans que vous visitez ou les fonctionnalités que vous utilisez) liés à votre identifiant utilisateur. Ces données sont stockées sur nos propres serveurs et ne sont jamais partagées avec des tiers. Nous n'utilisons aucun SDK d'analyse ou de suivi tiers.</p>
+
+            <h3>1.9 Données collectées automatiquement</h3>
+            <p>Nous collectons un minimum de données techniques nécessaires au fonctionnement de l'application :</p>
+            <ul>
+                <li>Le type d'appareil et la version du système d'exploitation</li>
+                <li>La version de l'application</li>
+                <li>Les journaux d'erreurs et de plantages</li>
+            </ul>
+
+            <h2>2. Comment nous utilisons vos informations</h2>
+            <p>Nous utilisons vos informations pour :</p>
+            <ul>
+                <li>Créer et gérer votre compte</li>
+                <li>Vous permettre d'enregistrer et de partager des activités culturelles</li>
+                <li>Afficher votre profil aux autres utilisateurs</li>
+                <li>Fournir le fil d'actualité social et la fonctionnalité d'abonnement</li>
+                <li>Vous permettre d'enregistrer (mettre en favoris) des activités pour consultation ultérieure</li>
+                <li>Vous permettre de mentionner d'autres utilisateurs avec @ dans les commentaires et les notes d'activité</li>
+                <li>Gérer les paramètres de compte privé et les demandes d'abonnement</li>
+                <li>Gérer les relations de blocage entre utilisateurs</li>
+                <li>Envoyer des notifications in-app et push concernant les abonnements, demandes d'abonnement, mentions « J'aime », commentaires, réponses, mentions et mentions « J'aime » sur les commentaires</li>
+                <li>Traiter les signalements de contenu pour maintenir les standards de la communauté</li>
+                <li>Appliquer la confidentialité au niveau des activités (les logs privés ne sont visibles que par vous)</li>
+                <li>Remplir automatiquement le lieu lors de l'enregistrement d'une activité (avec votre autorisation)</li>
+                <li>Fournir la recherche de lieu et l'auto-complétion lors de l'enregistrement d'activités</li>
+                <li>Améliorer et maintenir l'Application</li>
+                <li>Répondre aux demandes de support</li>
+            </ul>
+
+            <h2>3. Comment nous partageons vos informations</h2>
+
+            <h3>3.1 Avec les autres utilisateurs</h3>
+            <p>Les informations suivantes sont visibles par les autres utilisateurs de Colta :</p>
+            <ul>
+                <li>Votre nom, avatar et description de localisation</li>
+                <li>Vos activités enregistrées (type, titre, note, date, lieu, photos) — sauf si votre compte est privé, auquel cas seuls les abonnés approuvés peuvent voir vos activités</li>
+                <li>Vos nombres d'abonnés et d'abonnements</li>
+                <li>Votre liste d'activités enregistrées est visible uniquement par vous</li>
+            </ul>
+            <p>Les activités marquées comme privées ne sont visibles que par vous, quel que soit le paramètre de confidentialité de votre compte. Les demandes d'abonnement pour les comptes privés ne sont visibles que par vous jusqu'à ce que vous les acceptiez ou les refusiez.</p>
+
+            <h3>3.2 Avec les prestataires de services</h3>
+            <p>Nous utilisons les prestataires de services suivants pour exploiter l'Application :</p>
+            <ul>
+                <li><strong>Supabase</strong> (<a href="https://supabase.com">supabase.com</a>) — notre fournisseur d'infrastructure backend. Supabase traite et stocke vos données en notre nom, y compris l'authentification de compte, le stockage en base de données, le stockage de fichiers (photos) et les notifications en temps réel. <a href="https://supabase.com/privacy">Politique de confidentialité de Supabase</a>.</li>
+                <li><strong>Resend</strong> (<a href="https://resend.com">resend.com</a>) — utilisé uniquement pour envoyer des notifications par e-mail à notre équipe de support lorsqu'un utilisateur soumet un signalement de contenu. Aucune donnée personnelle au-delà du contenu du signalement n'est partagée avec Resend. <a href="https://resend.com/legal/privacy-policy">Politique de confidentialité de Resend</a>.</li>
+                <li><strong>Service de Notifications Push Apple (APNs)</strong> — utilisé pour envoyer des notifications push sur votre appareil lorsque vous avez donné votre accord. Seuls votre jeton d'appareil et le contenu de la notification sont transmis à Apple pour la livraison.</li>
+            </ul>
+
+            <h3>3.3 Nous ne faisons PAS</h3>
+            <ul>
+                <li>Vendre vos données personnelles à des tiers</li>
+                <li>Partager vos données avec des annonceurs</li>
+                <li>Utiliser vos données pour de la publicité ciblée</li>
+                <li>Utiliser des SDK d'analyse ou de suivi tiers</li>
+                <li>Vous suivre à travers d'autres applications ou sites web</li>
+            </ul>
+
+            <h2>4. Stockage et sécurité des données</h2>
+            <ul>
+                <li>Vos données sont stockées sur l'infrastructure cloud sécurisée de Supabase</li>
+                <li>Les mots de passe sont hachés et jamais stockés en clair</li>
+                <li>Toutes les transmissions de données utilisent le chiffrement HTTPS</li>
+                <li>Les photos sont stockées dans les espaces de stockage sécurisés de Supabase</li>
+                <li>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données</li>
+            </ul>
+
+            <h2>5. Vos droits</h2>
+            <p>Vous avez le droit de :</p>
+            <ul>
+                <li>Accéder à vos données personnelles via l'Application</li>
+                <li>Mettre à jour vos informations de profil à tout moment</li>
+                <li>Basculer votre compte entre public et privé à tout moment</li>
+                <li>Accepter ou refuser les demandes d'abonnement à tout moment</li>
+                <li>Marquer des activités individuelles comme privées</li>
+                <li>Enregistrer et retirer des activités d'autres utilisateurs de vos favoris</li>
+                <li>Bloquer et débloquer d'autres utilisateurs</li>
+                <li>Signaler du contenu qui enfreint nos Conditions</li>
+                <li>Désactiver les notifications push à tout moment via les réglages de votre appareil</li>
+                <li>Supprimer votre compte et toutes les données associées depuis l'écran Réglages</li>
+                <li>Révoquer les autorisations de localisation, caméra ou photothèque à tout moment via les réglages de votre appareil</li>
+            </ul>
+            <p>Lorsque vous supprimez votre compte, votre profil, vos activités, photos, commentaires, mentions « J'aime », activités enregistrées, abonnements, demandes d'abonnement, blocages, signalements et notifications sont définitivement supprimés. Cette action est irréversible.</p>
+
+            <h2>6. Conservation des données</h2>
+            <ul>
+                <li>Nous conservons vos données tant que votre compte est actif</li>
+                <li>Lorsque vous supprimez votre compte, toutes vos données sont définitivement supprimées de nos systèmes</li>
+                <li>Nous ne conservons pas de sauvegardes des données de comptes supprimés</li>
+            </ul>
+
+            <h2>7. Confidentialité des enfants</h2>
+            <p>L'Application n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si nous apprenons que nous avons collecté des informations personnelles d'un enfant de moins de 13 ans, nous prendrons les mesures nécessaires pour supprimer ces informations.</p>
+
+            <h2>8. Liens vers des tiers</h2>
+            <p>L'Application ne contient pas de liens vers des sites web ou services tiers au-delà de ceux décrits dans la présente politique.</p>
+
+            <h2>9. Modifications de cette Politique de Confidentialité</h2>
+            <p>Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre. Nous vous informerons de tout changement en mettant à jour la date de « Dernière mise à jour » en haut de cette politique. Nous vous encourageons à consulter régulièrement cette Politique de Confidentialité.</p>
+
+            <h2>10. Nous contacter</h2>
+            <p>Si vous avez des questions concernant cette Politique de Confidentialité ou nos pratiques en matière de données, veuillez nous contacter à :</p>
+            <p><a href="mailto:support@getcolta.com">support@getcolta.com</a></p>
+        </div>
+
+        <div class="footer-links">
+            <a href="terms.html" id="link-terms">Terms and Conditions</a>
+            <a href="privacy.html" id="link-privacy">Privacy Policy</a>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms &amp; Conditions</a>
-                <a href="support.html">Support</a>
-            </div>
-            <p class="copyright">&copy; 2026 Colta. All rights reserved.</p>
-        </div>
-    </footer>
+    <script>
+        function setLang(lang) {
+            document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+            document.getElementById('content-fr').style.display = lang === 'fr' ? 'block' : 'none';
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+            document.documentElement.lang = lang;
+            document.title = lang === 'fr' ? 'Politique de Confidentialité — Colta' : 'Privacy Policy — Colta';
+            document.getElementById('link-terms').textContent = lang === 'fr' ? 'Conditions Générales' : 'Terms and Conditions';
+            document.getElementById('link-privacy').textContent = lang === 'fr' ? 'Politique de Confidentialité' : 'Privacy Policy';
 
+            var url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.history.replaceState({}, '', url);
+
+            var termsLink = document.getElementById('link-terms');
+            termsLink.href = lang === 'fr' ? 'terms.html?lang=fr' : 'terms.html';
+            var privacyLink = document.getElementById('link-privacy');
+            privacyLink.href = lang === 'fr' ? 'privacy.html?lang=fr' : 'privacy.html';
+        }
+
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            var lang = params.get('lang');
+            if (lang === 'fr') setLang('fr');
+        })();
+    </script>
 </body>
 </html>
