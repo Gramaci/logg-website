@@ -1,189 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lang-en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms and Conditions — Colta</title>
-    <style>
-        :root {
-            --bg: #FAFAF8;
-            --text: #1A1A1A;
-            --text-secondary: #6B6B6B;
-            --accent: #2D2D2D;
-            --border: #E5E5E3;
-            --card-bg: #FFFFFF;
-            --max-width: 720px;
-        }
+    <meta name="description" content="Terms and Conditions for the Colta mobile application.">
+    <meta name="theme-color" content="#F5F1EA" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1C1A17" media="(prefers-color-scheme: dark)">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+    <!-- Google Fonts: Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900&display=swap" rel="stylesheet">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 48px 24px 80px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 48px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: var(--text);
-            text-decoration: none;
-        }
-
-        .lang-toggle {
-            display: flex;
-            gap: 0;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .lang-btn {
-            padding: 6px 16px;
-            font-size: 13px;
-            font-weight: 600;
-            border: none;
-            background: transparent;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .lang-btn.active {
-            background: var(--accent);
-            color: #fff;
-        }
-
-        .lang-btn:hover:not(.active) {
-            background: var(--border);
-        }
-
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
-        }
-
-        .last-updated {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-        }
-
-        .intro {
-            font-size: 16px;
-            color: var(--text);
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            letter-spacing: -0.3px;
-        }
-
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-top: 24px;
-            margin-bottom: 12px;
-        }
-
-        p {
-            font-size: 15px;
-            margin-bottom: 16px;
-            color: var(--text);
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 16px;
-        }
-
-        ul li {
-            font-size: 15px;
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 6px;
-        }
-
-        ul li::before {
-            content: "•";
-            position: absolute;
-            left: 4px;
-            color: var(--text-secondary);
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-        .footer-links {
-            margin-top: 60px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            gap: 24px;
-            font-size: 14px;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: var(--text);
-        }
-
-        @media (max-width: 600px) {
-            .container { padding: 32px 20px 60px; }
-            h1 { font-size: 26px; }
-            header { flex-direction: column; gap: 16px; align-items: flex-start; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="#" class="logo">Colta</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="logo">colta</a>
+            <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="/"><span class="en-only">Home</span><span class="fr-only">Accueil</span></a></li>
+                <li><a href="privacy.html"><span class="en-only">Privacy</span><span class="fr-only">Confidentialité</span></a></li>
+                <li><a href="terms.html" class="active"><span class="en-only">Terms</span><span class="fr-only">Conditions</span></a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
             <div class="lang-toggle">
-                <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
-                <button class="lang-btn" onclick="setLang('fr')" id="btn-fr">FR</button>
+                <button id="lang-en">EN</button>
+                <button id="lang-fr">FR</button>
             </div>
-        </header>
+        </div>
+    </nav>
 
-        <!-- ENGLISH -->
-        <div id="content-en">
-            <h1>Terms and Conditions</h1>
-            <p class="last-updated">Last updated: March 9, 2026</p>
+    <!-- Terms and Conditions — English -->
+    <div class="legal-page en-only">
+        <h1>Terms and Conditions</h1>
+        <p class="last-updated">Last updated: March 9, 2026</p>
 
-            <p class="intro">Please read these Terms and Conditions ("Terms") carefully before using the Colta mobile application (the "App") operated by Colta ("we", "our", or "us").</p>
-
+        <div class="legal-content">
+            <p>Please read these Terms and Conditions ("Terms") carefully before using the Colta mobile application (the "App") operated by Colta ("we", "our", or "us").</p>
             <p>By creating an account or using the App, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the App.</p>
 
             <h2>1. Account Registration</h2>
@@ -268,14 +129,15 @@
             <p>If you have any questions about these Terms, please contact us at:</p>
             <p><a href="mailto:support@getcolta.com">support@getcolta.com</a></p>
         </div>
+    </div>
 
-        <!-- FRENCH -->
-        <div id="content-fr" style="display: none;">
-            <h1>Conditions Générales d'Utilisation</h1>
-            <p class="last-updated">Dernière mise à jour : 9 mars 2026</p>
+    <!-- Conditions Générales d'Utilisation — French -->
+    <div class="legal-page fr-only">
+        <h1>Conditions Générales d'Utilisation</h1>
+        <p class="last-updated">Dernière mise à jour : 9 mars 2026</p>
 
-            <p class="intro">Veuillez lire attentivement les présentes Conditions Générales d'Utilisation (« Conditions ») avant d'utiliser l'application mobile Colta (l'« Application ») exploitée par Colta (« nous », « notre »).</p>
-
+        <div class="legal-content">
+            <p>Veuillez lire attentivement les présentes Conditions Générales d'Utilisation (« Conditions ») avant d'utiliser l'application mobile Colta (l'« Application ») exploitée par Colta (« nous », « notre »).</p>
             <p>En créant un compte ou en utilisant l'Application, vous acceptez d'être lié par les présentes Conditions. Si vous n'acceptez pas ces Conditions, n'utilisez pas l'Application.</p>
 
             <h2>1. Inscription au compte</h2>
@@ -316,7 +178,7 @@
             <p>4.3 Vous bénéficiez d'une licence limitée, non exclusive et non transférable pour utiliser l'Application à des fins personnelles et non commerciales conformément aux présentes Conditions.</p>
 
             <h2>5. Confidentialité</h2>
-            <p>Votre utilisation de l'Application est également régie par notre <a href="privacy.html?lang=fr">Politique de Confidentialité</a>, qui est incorporée aux présentes Conditions par référence. Veuillez consulter notre Politique de Confidentialité pour comprendre comment nous collectons et utilisons vos informations.</p>
+            <p>Votre utilisation de l'Application est également régie par notre <a href="privacy.html">Politique de Confidentialité</a>, qui est incorporée aux présentes Conditions par référence. Veuillez consulter notre Politique de Confidentialité pour comprendre comment nous collectons et utilisons vos informations.</p>
 
             <h2>6. Fonctionnalités sociales</h2>
             <p>6.1 L'Application vous permet de suivre d'autres utilisateurs, d'aimer des activités et des commentaires, de publier des commentaires, de mentionner d'autres utilisateurs avec @, et d'enregistrer (mettre en favoris) des activités. Vous acceptez d'utiliser ces fonctionnalités de manière respectueuse et conformément aux présentes Conditions.</p>
@@ -360,39 +222,20 @@
             <p>Si vous avez des questions concernant les présentes Conditions, veuillez nous contacter à :</p>
             <p><a href="mailto:support@getcolta.com">support@getcolta.com</a></p>
         </div>
-
-        <div class="footer-links">
-            <a href="terms.html" id="link-terms">Terms and Conditions</a>
-            <a href="privacy.html" id="link-privacy">Privacy Policy</a>
-        </div>
     </div>
 
-    <script>
-        function setLang(lang) {
-            document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
-            document.getElementById('content-fr').style.display = lang === 'fr' ? 'block' : 'none';
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-            document.documentElement.lang = lang;
-            document.title = lang === 'fr' ? "Conditions Générales d'Utilisation — Colta" : 'Terms and Conditions — Colta';
-            document.getElementById('link-terms').textContent = lang === 'fr' ? 'Conditions Générales' : 'Terms and Conditions';
-            document.getElementById('link-privacy').textContent = lang === 'fr' ? 'Politique de Confidentialité' : 'Privacy Policy';
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="privacy.html"><span class="en-only">Privacy Policy</span><span class="fr-only">Politique de confidentialité</span></a>
+                <a href="terms.html"><span class="en-only">Terms &amp; Conditions</span><span class="fr-only">Conditions générales</span></a>
+                <a href="support.html">Support</a>
+            </div>
+            <p class="copyright"><span class="en-only">&copy; 2026 Colta. All rights reserved.</span><span class="fr-only">&copy; 2026 Colta. Tous droits réservés.</span></p>
+        </div>
+    </footer>
 
-            var url = new URL(window.location);
-            url.searchParams.set('lang', lang);
-            window.history.replaceState({}, '', url);
-
-            var privacyLink = document.getElementById('link-privacy');
-            privacyLink.href = lang === 'fr' ? 'privacy.html?lang=fr' : 'privacy.html';
-            var termsLink = document.getElementById('link-terms');
-            termsLink.href = lang === 'fr' ? 'terms.html?lang=fr' : 'terms.html';
-        }
-
-        (function() {
-            var params = new URLSearchParams(window.location.search);
-            var lang = params.get('lang');
-            if (lang === 'fr') setLang('fr');
-        })();
-    </script>
+    <script src="lang.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lang-en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,16 +26,20 @@
             <a href="/" class="logo">colta</a>
             <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
+                <li><a href="/"><span class="en-only">Home</span><span class="fr-only">Accueil</span></a></li>
+                <li><a href="privacy.html"><span class="en-only">Privacy</span><span class="fr-only">Confidentialité</span></a></li>
+                <li><a href="terms.html"><span class="en-only">Terms</span><span class="fr-only">Conditions</span></a></li>
                 <li><a href="support.html" class="active">Support</a></li>
             </ul>
+            <div class="lang-toggle">
+                <button id="lang-en">EN</button>
+                <button id="lang-fr">FR</button>
+            </div>
         </div>
     </nav>
 
-    <!-- Support -->
-    <div class="support-page">
+    <!-- Support — English -->
+    <div class="support-page en-only">
         <h1>Support</h1>
         <p class="subtitle">Need help with Colta? We're here for you.</p>
 
@@ -66,17 +70,50 @@
         </div>
     </div>
 
+    <!-- Support — French -->
+    <div class="support-page fr-only">
+        <h1>Support</h1>
+        <p class="subtitle">Besoin d'aide avec Colta ? Nous sommes là pour vous.</p>
+
+        <div class="support-card">
+            <div class="icon">&#128231;</div>
+            <h3>Support par e-mail</h3>
+            <p>Pour toute question, problème ou suggestion, contactez-nous à :</p>
+            <p style="margin-top: 8px;"><a href="mailto:support@getcolta.com">support@getcolta.com</a></p>
+            <p style="margin-top: 8px;">Nous répondons généralement sous 24 heures.</p>
+        </div>
+
+        <div class="support-card">
+            <div class="icon">&#128273;</div>
+            <h3>Problèmes de compte</h3>
+            <p>Si vous avez des difficultés à vous connecter, essayez de réinitialiser votre mot de passe. Si le problème persiste, contactez-nous avec l'adresse e-mail associée à votre compte.</p>
+        </div>
+
+        <div class="support-card">
+            <div class="icon">&#128465;</div>
+            <h3>Supprimer votre compte</h3>
+            <p>Vous pouvez supprimer votre compte directement dans l'application : allez dans <strong>Profil &rarr; Réglages &rarr; Supprimer le compte</strong>. Cela supprimera définitivement toutes vos données. Si vous ne pouvez pas accéder à l'application, envoyez-nous un e-mail et nous nous en occuperons.</p>
+        </div>
+
+        <div class="support-card">
+            <div class="icon">&#128027;</div>
+            <h3>Signaler un bug</h3>
+            <p>Vous avez trouvé quelque chose qui ne fonctionne pas ? Envoyez-nous un e-mail avec une description du problème, ce à quoi vous vous attendiez, et le modèle de votre appareil. Les captures d'écran sont toujours utiles.</p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-inner">
             <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="privacy.html"><span class="en-only">Privacy Policy</span><span class="fr-only">Politique de confidentialité</span></a>
+                <a href="terms.html"><span class="en-only">Terms &amp; Conditions</span><span class="fr-only">Conditions générales</span></a>
                 <a href="support.html">Support</a>
             </div>
-            <p class="copyright">&copy; 2026 Colta. All rights reserved.</p>
+            <p class="copyright"><span class="en-only">&copy; 2026 Colta. All rights reserved.</span><span class="fr-only">&copy; 2026 Colta. Tous droits réservés.</span></p>
         </div>
     </footer>
 
+    <script src="lang.js"></script>
 </body>
 </html>

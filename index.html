@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lang-en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,11 +32,15 @@
             <a href="/" class="logo">colta</a>
             <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
+                <li><a href="/" class="active"><span class="en-only">Home</span><span class="fr-only">Accueil</span></a></li>
+                <li><a href="privacy.html"><span class="en-only">Privacy</span><span class="fr-only">Confidentialité</span></a></li>
+                <li><a href="terms.html"><span class="en-only">Terms</span><span class="fr-only">Conditions</span></a></li>
                 <li><a href="support.html">Support</a></li>
             </ul>
+            <div class="lang-toggle">
+                <button id="lang-en">EN</button>
+                <button id="lang-fr">FR</button>
+            </div>
         </div>
     </nav>
 
@@ -44,16 +48,25 @@
     <section class="hero">
         <div class="hero-content">
             <img src="appicon.png" alt="Colta App Icon" class="app-icon">
-            <h1>Log your <span>cultural</span> experiences</h1>
-            <p class="tagline">A social journal for your cultural life. Track and share everything you read, watch, and attend — then see what your friends are into.</p>
+            <h1 class="en-only">Log your <span>cultural</span> experiences</h1>
+            <h1 class="fr-only">Gardez une trace de vos <span>sorties culturelles</span></h1>
+            <p class="tagline en-only">A social journal for your cultural life. Track and share everything you read, watch, and attend — then see what your friends are into.</p>
+            <p class="tagline fr-only">Un journal social pour votre vie culturelle. Enregistrez et partagez tout ce que vous lisez, regardez et voyez — puis découvrez ce que vos amis aiment.</p>
 
             <!-- Activity type pills -->
-            <div class="activity-types-hero">
+            <div class="activity-types-hero en-only">
                 <span class="activity-pill movie">&#127916; Movies</span>
                 <span class="activity-pill theatre">&#127917; Theatre</span>
                 <span class="activity-pill exhibition">&#127963; Exhibitions</span>
                 <span class="activity-pill concert">&#127928; Concerts</span>
                 <span class="activity-pill book">&#128214; Books</span>
+            </div>
+            <div class="activity-types-hero fr-only">
+                <span class="activity-pill movie">&#127916; Films</span>
+                <span class="activity-pill theatre">&#127917; Théâtre</span>
+                <span class="activity-pill exhibition">&#127963; Expositions</span>
+                <span class="activity-pill concert">&#127928; Concerts</span>
+                <span class="activity-pill book">&#128214; Livres</span>
             </div>
 
             <!-- App Store badge -->
@@ -65,9 +78,9 @@
 
     <!-- Activity Types Showcase -->
     <section class="activity-types" id="types">
-        <h2>Five ways to log</h2>
-        <p class="section-subtitle">Every type of cultural experience has its own colour and icon in your feed.</p>
-        <div class="types-grid">
+        <h2><span class="en-only">Five ways to log</span><span class="fr-only">Cinq façons d'enregistrer</span></h2>
+        <p class="section-subtitle"><span class="en-only">Every type of cultural experience has its own colour and icon in your feed.</span><span class="fr-only">Chaque type d'expérience culturelle a sa propre couleur et icône dans votre fil.</span></p>
+        <div class="types-grid en-only">
             <div class="type-card movie">
                 <div class="type-icon">&#127916;</div>
                 <h3>Movies</h3>
@@ -89,13 +102,35 @@
                 <h3>Books</h3>
             </div>
         </div>
+        <div class="types-grid fr-only">
+            <div class="type-card movie">
+                <div class="type-icon">&#127916;</div>
+                <h3>Films</h3>
+            </div>
+            <div class="type-card theatre">
+                <div class="type-icon">&#127917;</div>
+                <h3>Théâtre</h3>
+            </div>
+            <div class="type-card exhibition">
+                <div class="type-icon">&#127963;</div>
+                <h3>Expositions</h3>
+            </div>
+            <div class="type-card concert">
+                <div class="type-icon">&#127928;</div>
+                <h3>Concerts</h3>
+            </div>
+            <div class="type-card book">
+                <div class="type-icon">&#128214;</div>
+                <h3>Livres</h3>
+            </div>
+        </div>
     </section>
 
     <!-- Features -->
     <section class="features" id="features">
-        <h2>What you can do</h2>
-        <p class="section-subtitle">Everything you need to keep a beautiful cultural journal and share it with friends.</p>
-        <div class="features-grid">
+        <h2><span class="en-only">What you can do</span><span class="fr-only">Ce que vous pouvez faire</span></h2>
+        <p class="section-subtitle"><span class="en-only">Everything you need to keep a beautiful cultural journal and share it with friends.</span><span class="fr-only">Tout ce qu'il faut pour tenir un beau journal culturel et le partager avec vos amis.</span></p>
+        <div class="features-grid en-only">
             <div class="feature-card">
                 <div class="icon">&#128221;</div>
                 <h3>Log activities</h3>
@@ -127,12 +162,44 @@
                 <p>Build your profile with stats and streaks, filter logs by type, browse weekly summaries, and view everything on a calendar.</p>
             </div>
         </div>
+        <div class="features-grid fr-only">
+            <div class="feature-card">
+                <div class="icon">&#128221;</div>
+                <h3>Enregistrer des activités</h3>
+                <p>Notez vos livres, films, pièces de théâtre, expositions et concerts avec des notes, photos, lieu et date. Gardez certains logs privés — rien que pour vous.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#129327;</div>
+                <h3>Évaluer chaque expérience</h3>
+                <p>Qu'avez-vous ressenti ? Évaluez chaque activité de Bof à Époustouflant et construisez un historique personnel de ce qui vous a le plus marqué.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128101;</div>
+                <h3>Suivre vos amis</h3>
+                <p>Découvrez ce que vos amis lisent, regardent et visitent dans un beau fil d'actualité social. Envoyez des demandes d'abonnement aux comptes privés.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128172;</div>
+                <h3>Commenter et aimer</h3>
+                <p>Interagissez avec les activités de vos amis. Partagez vos impressions, voyez qui a aimé un log et recevez des réponses à vos commentaires.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128247;</div>
+                <h3>Ajouter des photos</h3>
+                <p>Capturez l'instant avec jusqu'à 10 photos par activité — depuis votre appareil photo ou votre galerie. Recadrez votre avatar pour être au top.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128200;</div>
+                <h3>Votre profil culturel</h3>
+                <p>Construisez votre profil avec des statistiques et des séries, filtrez par type, parcourez les résumés hebdomadaires et consultez tout sur un calendrier.</p>
+            </div>
+        </div>
     </section>
 
     <!-- How It Works -->
     <section class="how-it-works">
-        <h2>How it works</h2>
-        <div class="steps">
+        <h2><span class="en-only">How it works</span><span class="fr-only">Comment ça marche</span></h2>
+        <div class="steps en-only">
             <div class="step">
                 <div class="step-number">1</div>
                 <h3>Log it</h3>
@@ -149,13 +216,30 @@
                 <p>Search for friends, follow them, and see what they're reading, watching, and attending.</p>
             </div>
         </div>
+        <div class="steps fr-only">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Enregistrez</h3>
+                <p>Choisissez un type, ajoutez un titre, une note, des photos et un lieu. Votre log est sauvegardé instantanément.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Partagez</h3>
+                <p>Votre log apparaît dans le fil de vos abonnés. Ils peuvent aimer, commenter et découvrir de nouvelles choses.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Explorez</h3>
+                <p>Cherchez des amis, suivez-les et voyez ce qu'ils lisent, regardent et visitent.</p>
+            </div>
+        </div>
     </section>
 
     <!-- CTA -->
     <section class="cta-section">
         <div class="cta-card">
-            <h2>Start your cultural journal</h2>
-            <p>Join Colta and never forget the things that move you.</p>
+            <h2><span class="en-only">Start your cultural journal</span><span class="fr-only">Commencez votre journal culturel</span></h2>
+            <p><span class="en-only">Join Colta and never forget the things that move you.</span><span class="fr-only">Rejoignez Colta et n'oubliez plus jamais ce qui vous touche.</span></p>
             <a href="https://apps.apple.com/fr/app/colta/id6759000296?l=en-GB" class="app-store-badge" aria-label="Download on the App Store">
                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
             </a>
@@ -166,13 +250,14 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="privacy.html"><span class="en-only">Privacy Policy</span><span class="fr-only">Politique de confidentialité</span></a>
+                <a href="terms.html"><span class="en-only">Terms &amp; Conditions</span><span class="fr-only">Conditions générales</span></a>
                 <a href="support.html">Support</a>
             </div>
-            <p class="copyright">&copy; 2026 Colta. All rights reserved.</p>
+            <p class="copyright"><span class="en-only">&copy; 2026 Colta. All rights reserved.</span><span class="fr-only">&copy; 2026 Colta. Tous droits réservés.</span></p>
         </div>
     </footer>
 
+    <script src="lang.js"></script>
 </body>
 </html>
